@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap"
+    rel="stylesheet">
+
+  <link href="./style.css" rel="stylesheet" />
+  <title>Bankist</title>
+</head>
+
+<body>
+  <header>
+    <p class="welcome">Log in to get started!</p>
+    <a href="https://brandlogos.net/world-bank-logo-vector-95478.html"></a>
+
+    <form class="login">
+      <input type="text" class="login_input login_input--user" placeholder="User">
+      <input type="text" placeholder="PIN" maxlength="4" class="login_input login_input--pin">
+      <button class="login_btn">&rarr;</button>
+    </form>
+  </header>
+
+
+  <main class="app">
+    <!-- Balance -->
+    <div class="balance">
+      <div class="">
+        <p class="balance_label">Current Balance</p>
+        <p class="balance_date">
+          As of <span class="date">05/03/2028</span>
+        </p>
+      </div>
+
+      <p class="balance_value">00000$</p>
+    </div>
+
+    <div class="main--in">
+      <!-- Movements -->
+      <div class="movements">
+        <div class="movements_row">
+          <div class="movements_type movements_type--deposit">2 Deposit</div>
+          <div class="movements_date">3 Days ago</div>
+          <div class="movements_value">4,000$</div>
+        </div>
+
+        <div class="movements_row">
+          <div class="movements_type movements_type--withdrawal">2 Deposit</div>
+          <div class="movements_date">3 Days ago</div>
+          <div class="movements_value">4,000$</div>
+        </div>
+      </div>
+
+      <!--OPERATION: TRANSFERS-->
+      <div class="operation--block">
+        <div class="operation operation--transfer">
+          <h2>Transfer Money</h2>
+          <form class="form form--transfer">
+            <input type="text" class="form_input form_input--to" placeholder="Transfer To" />
+            <input type="number" class="form_input form_input--amount" placeholder="Amount" />
+            <button class="form_btn form_btn--transfer">&rarr;</button>
+          </form>
+        </div>
+
+        <!--Operation: Loan-->
+        <div class="operation operation--loan">
+          <h2>Request loan</h2>
+          <form action="" class="form form--loan">
+            <input type="text" class="form_input form_input--loan-amount" placeholder="Amount" />
+            <button class="form_btn form_btn--loan">&rarr;</button>
+          </form>
+        </div>
+
+        <!--Operation: Close-->
+        <div class="operation operation--close">
+          <h2>Close Amount</h2>
+          <form action="" class="form form--close">
+            <input type="text" class="form_input form_input--user" placeholder="Confirm User" />
+            <input type="password" maxlength="6" class="form_input form_input--pin" placeholder="Confirm Pin" />
+            <button class="form_btn form_btn--close">&rarr;</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="summary">
+      <div class="summary_blocks">
+        <p class="summary_label">In</p>
+        <p class="summary_value summary_value--in">00000$</p>
+      </div>
+      <div class="summary_blocks">
+        <p class="summary_label">Out</p>
+        <p class="summary_value summary_value--out">00000$</p>
+      </div>
+      <div class="summary_blocks">
+        <p class="summary_label">Interest</p>
+        <p class="summary_value summary_value--interest">00000$</p>
+      </div>
+      <button class="btn--sort">&downarrow; SORT</button>
+    </div>
+  </main>
+
+  <script src="./script.js">
+  </script>
+</body>
+
+</html>
